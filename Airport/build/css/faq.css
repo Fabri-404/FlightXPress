@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Patua+One&family=Playwrite+CO:wght@100..400&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
+    background-image: url('/TicketXPress/build/img/difuminado.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Mantén cover si deseas cubrir toda la pantalla */
+    background-attachment: fixed; /* Mantén la imagen fija mientras se hace scroll */
+    height: auto; /* Ajusta el fondo según el contenido */
+    width: 100%;
+
+
+
+    
+}
+h1{
+    text-align: center;
+    margin-bottom: 60px;
+    color: white;
+    font-family: "Lilita One", serif;
+    font-size: 3vw;
+}
+.faq-container {
+    display: flex;
+    align-items: flex-start; /* Alinea los elementos verticalmente */
+    justify-content: flex-start; /* Centra el contenido horizontalmente */
+    gap: 20px; /* Espaciado entre la imagen y el contenido */
+    padding: 10px;
+}
+.faq-image img {
+    width: 500px;
+    height: 500px;
+    margin-left: 20px;
+    margin-top: 80px;
+}
+.faq-content {
+    flex: 1; /* El contenedor de preguntas ocupa el doble de espacio que la imagen */
+}
+.container-fluid {
+    padding: 20px; /* Añade espacio alrededor del contenedor */
+    font-family: "Ubuntu", sans-serif;
+}
+.container {
+    margin: 0 auto;
+    max-width: 900px; /* Aumenta el ancho máximo del contenedor */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    background-color: #161A2D;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Ubuntu", sans-serif;
+}
+
+.container .tab {
+    position: relative;
+    background: white;
+    padding: 0 20px 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.container .tab input {
+    appearance: none;
+}
+
+.container .tab label {
+    /* display: flex; */
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .tab label::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%; /* Centra verticalmente */
+    transform: translateY(-50%); /* Ajusta la posición para centrar */
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+
+.container .tab:hover label::after {
+    color: #333; 
+}
+
+.container .tab input:checked ~ label::after {
+    transform: rotate(135deg);
+    color: #fff;
+}
+
+.container .tab label h2 {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    display: flex;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center;
+    color: white;
+    font-size: 1.25em;
+    border-radius: 7px;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.container .tab input:checked ~ label h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* right: 300px;  COMO HAGO PARA QUE ESTE EL H2 EN EL LADO DERECHO*/
+    width: 100%;
+    height: 100%;
+    color: rgba(63, 63, 63, 0.2);
+    font-size: 10em;
+    padding: 60px;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.container .tab:nth-child(1) label h2 {
+    background: linear-gradient(135deg, #70f570, #49c628);
+}
+
+.container .tab:nth-child(2) label h2 {
+    background: linear-gradient(135deg, #3c8ce7, #00eaff);
+}
+
+.container .tab:nth-child(3) label h2 {
+    background: linear-gradient(135deg, #ff96f9, #c32bac);
+}
+
+.container .tab:nth-child(4) label h2 {
+    background: linear-gradient(135deg, #fd6e6a, #ffc600);
+}
+
+.container .tab label h3 {
+    position: relative;
+    font-weight: 500;
+    color: #333;
+    font-weight: 750;
+    z-index: 10;
+}
+
+.container .tab input:checked ~ label h3 {
+    /* background: #fff; */
+    padding: 2px 10px;
+    color: white;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    margin-right: 8px;
+}
+
+.container .tab .content {
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.container .tab input:checked ~ .content {
+    max-height: 100px;
+}
+
+.container .tab .content p {
+    position: relative;
+    padding: 10px 0;
+    color: #333;
+    z-index: 10;
+}
+
+.container .tab input:checked ~ .content p {
+    color: #333;
+    font-family: "Ubuntu", sans-serif;
+}
+/* Estilo para el contenido de acc1 cuando está visible */
+#acc1:checked ~ .content p {
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+}
+#acc2:checked ~ .content p {
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+}
+#acc3:checked ~ .content p {
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+}
+#acc4:checked ~ .content p {
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+}

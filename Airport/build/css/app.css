@@ -1,0 +1,227 @@
+/*------------PARTE FONTS -----------*/
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Angkor&family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CO:wght@100..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
+
+body, html {
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    /* height: 100%; */
+/*----------PARTE HEADER-----------*/
+}
+.header {
+    color: white;
+    position: relative;
+    width: 100%;
+    height: calc(108vh - 50px);
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../IMG/banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1; 
+}
+
+.header h1 {
+    font-family: "Angkor", serif;
+    font-size: 10vw;
+    margin: 120px 0 0 0;
+}
+
+.header h2 {
+    font-family: "Playwrite CO", cursive;
+    font-size: 3vw;
+    margin-top: -20px;
+    padding: 12px;
+}
+.header .highlight {
+    color: #FFD700;
+    font-family: "Creepster", system-ui;
+    font-size: 15vw;
+}
+.white-line {
+    width: 100%;
+    height: 43px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 245px;
+}
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header h2 {
+        font-size: 1em;
+    }
+}
+/*--------PARTE FOOTER----------*/
+/* Estilo general para el footer */
+footer {
+    background: linear-gradient(90deg, #2f2c55, #40285a);/* Mismo degradado que el navbar */
+    padding: 25px 70px 50px;
+    color: #fdfdfd; /* Texto en blanco */
+    font-family: cursive; /* Tipografía coherente */
+    position: relative;
+    width: 100%;
+}
+
+/* Estilo de los íconos sociales */
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 13px;
+    background-color: #FFD700; /* Amarillo inspirado en el botón ACCEDER */
+    margin: 10px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.socialIcons a i {
+    font-size: 2em;
+    color: #2f2c55; /* Azul oscuro coherente */
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #f7941e; /* Naranja al hacer hover */
+}
+
+.socialIcons a:hover i {
+    color: white;
+    transition: 0.5s;
+}
+
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    
+}
+
+.footerNav ul li a {
+    color: #fdfdfd; /* Color blanco */
+    margin: 20px;
+    text-decoration: none;
+    font-size: 27px;
+    font-family: "Single Day", cursive;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+    background-color: #FFD700; /* Naranja al hacer hover */
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* Sección inferior del footer */
+.footerBottom {
+    background-color: #4C2D50; /* Azul oscuro */
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+    font-family: cursive; /* Fuente consistente */
+}
+.scroll-to-top {
+    width: 43px;
+    height: 43px;
+    background-color: #FFD700; /* Color acorde al archivo */
+    color: #2f2c55;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    margin-right: 0; /* Espacio entre el botón y los enlaces */
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background-color: #bda000;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+    .footerNav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a {
+        padding: 8px;
+        margin: 4px;
+    }
+}
+/* Estilo para los botones de administración */
+.adminbotones .buttonGroup {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+}
+
+.adminbotones button {
+    background-color: #FFD700; /* Amarillo */
+    color: #000; /* Letra negra */
+    border: none;
+    padding: 10px 5px;
+    margin: 5px;
+    font-size: 1.1em;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Arial', sans-serif;
+    font-weight: 800;
+}
+
+.adminbotones button:hover {
+    background-color:whitesmoke; /* Naranja al pasar el cursor */
+    color: #000; /* Mantener el texto en negro */
+}

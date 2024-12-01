@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Patua+One&family=Playwrite+CO:wght@100..400&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+.contenido {
+    background-image: url('/ProyectoW3/componentes/IMG/difuminado.png');
+    background-size: cover; /* Esto hará que el fondo cubra el área sin distorsionarse */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: scroll; /* Hace que la imagen se desplace con el contenido */
+    height: auto; /* Ajusta la altura al contenido */
+    width: 100%;
+    margin-top: -10px;
+}
+
+.contenido h1{
+    font-family: "Lilita One", serif;
+    font-size: 4vw; /* vw hace de que la letra sea gradual a la pantalla */
+    padding: 50px;
+    text-align: center;
+    color: white;
+}
+/*----------PARTE BANNER EVENTOS-----------*/
+.bannerevento {
+    width: 90%;         /* Ajusta el ancho del contenedor */
+    max-width: 1700px;  /* O usa un ancho máximo si lo prefieres */
+    margin: auto;       /* Centra el contenedor */
+    padding: 15px;
+    border-radius: 5px;
+    font-family: "Ubuntu", sans-serif;
+}
+.bannerevento .card {
+    border: 5px solid #ffffff;
+}
+.bannerevento .card-img-top {
+    width: 100%;        /* Ajusta el ancho de la imagen al contenedor */
+    height: auto;
+}
+/*----------PARTE TARJETAS EVENTOS-----------*/
+.tarjetas{
+    padding: 20px;
+    display: flex;              /* Activa el flexbox */
+    justify-content: space-around;    /* Centra horizontalmente */
+    flex-wrap: wrap;           /* Permite que las tarjetas se envuelvan si son demasiado grandes */
+    font-family: "Ubuntu", sans-serif;
+}
+
+.row {
+    display: flex;         
+    justify-content: center; 
+}
+.tarjeta-espacio{
+    margin-left: 35px;  /* Espacio en el lado izquierdo */
+    margin-right: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+
+/*----------PARTE QUIENES SOMOS-----------*/
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px; /* Añadimos padding para que haya más espacio arriba */
+    font-family: "Ubuntu", sans-serif;
+}
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 10px;
+    height: 110%;
+    background-color: #FFD700;
+    z-index: 0;
+    border-radius: 5px;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    position: relative;
+    width: 100%;
+}
+
+.timeline-container.left .content {
+    order: 1;
+    text-align: right;
+    color: black;
+    padding: 20px;
+}
+.timeline-container.right {
+    flex-direction: row-reverse; /* Invertir contenido y círculo en la derecha */
+    
+}
+.timeline-container.right .content {
+    order: 2;
+    text-align: left;
+    color: black;
+    padding: 20px;
+}
+
+.timeline-container .content {
+    background-color: white;
+    padding: 10px 15px;
+    width: 30%;  /* Tamaño reducido */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* position: relative; */
+    z-index: 1;
+}
+
+.timeline-container .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.timeline-container .circle img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-container {
+        flex-direction: column;
+        align-items: center; /* Centrar los elementos verticalmente */
+    }
+
+    .timeline-container.left .content,
+    .timeline-container.right .content {
+        text-align: center;
+        width: 80%;
+        margin-top: 50px;
+        padding: 10px 15px;
+        height: auto;
+    }
+    .timeline-container.right {
+        flex-direction: column; /* Corregir flex-direction para contenedores de la derecha en pantallas pequeñas */
+    }
+
+    .timeline-container .circle {
+        position: relative;  /* Cambiamos a relativa para que los círculos no floten */
+        left: auto;
+        transform: none;  /* Eliminamos el desplazamiento en X */
+        margin-bottom: 10px;  /* Espacio entre el círculo y el contenido */
+    }
+
+    .timeline-line {
+        left: 50%;
+        height: 100%;
+    }
+}
+
+
+/*----------PARTE CUIDADES VISITADAS-----------*/
+.cuidades{
+    width: 90%;         /* Ajusta el ancho del contenedor */
+    max-width: 1700px;  /* O usa un ancho máximo si lo prefieres */
+    margin: auto;       /* Centra el contenedor */
+    padding: px;
+    border: 8px solid#ffffff;
+    border-radius: 6px;
+}
+/*----------PARTE SERVICIO ADICIONALES-----------*/
+.servicios{
+    width: 60%;         /* Ajusta el ancho del contenedor */
+    max-width: 1900px;  /* O usa un ancho máximo si lo prefieres */
+    margin: auto;       /* Centra el contenedor */
+    padding: 25px;
+    border-radius: 5px;
+    font-family: "Ubuntu", sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.black-text {
+    color: black !important; 
+}
